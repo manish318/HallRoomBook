@@ -39,7 +39,7 @@
 
 
 <p>
-    <a asp-action="Create">Add New Hall</a>
+    <a asp-action="Create"><button class="btn btn-primary">Add New Hall</button></a>
 </p>
 <div class="card">
     <div class="card-header">
@@ -67,9 +67,9 @@
                             @Html.DisplayFor(modelItem => item.IsActive)
                         </td>
                         <td>
-                            <a asp-action="Edit" asp-route-id="@item.RowId">Edit</a> |
-                            <a asp-action="Details" asp-route-id="@item.RowId">Details</a> |
-                            <a asp-action="Delete" asp-route-id="@item.RowId">Delete</a>
+                            <a asp-action="Edit" asp-route-id="@item.RowId"><button class="btn btn-primary">Edit</button></a> |
+                            <a asp-action="Details" asp-route-id="@item.RowId"><button class="btn btn-info">Details</button></a> |
+                            <a asp-action="Delete" asp-route-id="@item.RowId"><button class="btn btn-danger">Delete</button></a>
                         </td>
                     </tr>
                 }
@@ -77,30 +77,4 @@
         </table>
     </div>
  </div>
-
-<!-- jQuery -->
-<script src="~/plugins/jquery/jquery.min.js"></script>
-<!-- Bootstrap 4 -->
-<script src="~/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
-<!-- DataTables  & Plugins -->
-<script src="~/plugins/datatables/jquery.dataTables.min.js"></script>
-<script src="~/plugins/datatables-bs4/js/dataTables.bootstrap4.min.js"></script>
-<script src="~/plugins/datatables-responsive/js/dataTables.responsive.min.js"></script>
-<script src="~/plugins/datatables-responsive/js/responsive.bootstrap4.min.js"></script>
-<script src="~/plugins/datatables-buttons/js/dataTables.buttons.min.js"></script>
-<script src="~/plugins/datatables-buttons/js/buttons.bootstrap4.min.js"></script>
-<script src="~/plugins/jszip/jszip.min.js"></script>
-<script src="~/plugins/pdfmake/pdfmake.min.js"></script>
-<script src="~/plugins/pdfmake/vfs_fonts.js"></script>
-<script src="~/plugins/datatables-buttons/js/buttons.html5.min.js"></script>
-<script src="~/plugins/datatables-buttons/js/buttons.print.min.js"></script>
-<script src="~/plugins/datatables-buttons/js/buttons.colVis.min.js"></script>
-<script>
-    $(function () {
-        $("#example1").DataTable({
-            "responsive": true, "lengthChange": false, "autoWidth": false,
-            "buttons": ["copy", "csv", "excel", "pdf", "print", "colvis"]
-        }).buttons().container().appendTo('#example1_wrapper .col-md-6:eq(0)');
-    });
-</script>
 
