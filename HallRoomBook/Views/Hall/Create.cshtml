@@ -6,7 +6,7 @@
 
 <div class="card card-primary">
     <div class="card-header" style="text-align:center;">
-        <h3 class="">Add New Hall</h3>
+        <h5 class="">Add New Hall</h5>
     </div>
 <!--<div class="row">
     <div class="col-md-4">
@@ -38,20 +38,21 @@
     <div class="card-body">
         <div asp-validation-summary="ModelOnly" class="text-danger"></div>
         <div class="form-group">
-            <label asp-for="HallName">Hall Name</label>
-            <input asp-for="HallName" class="form-control" >
+            <label asp-for="HallName">Hall Name:</label>
+            <input asp-for="HallName" class="" >
             <span asp-validation-for="HallName" class="text-danger"></span>
         </div>
-        <div class="form-group">
-            <!--<label asp-for="HallName">IsActive</label>
-            <label class="form-check-label">
-                <input class="form-check-input" asp-for="IsActive" />
-                </label>-->
-                <!--<select asp-for="IsActive" class="form-check-input">
-                    <option value="">IsActive</option>
-                 
-            </select>
-                </div>-->
+       
+            
+                <div class="form-check">
+                    
+                    
+                    <input type="checkbox" asp-for="IsActive" class="form-check-input">
+                <label class="form-check-label" asp-for="IsActive"><b>IsActive</b></label>
+                    
+               </div>
+    
+         
         <!--<div class="form-group">
             <label for="exampleInputFile">File input</label>
             <div class="input-group">
@@ -73,9 +74,7 @@
 
     <div class="card-footer">
         <button type="submit" class="btn btn-primary">Submit</button>
-    </div>
-    <div>
-        <a asp-action="Index">Back to List</a>
+        <button asp-action="Index" class="btn btn-primary">Cancel</button>
     </div>
 </form>
 </div>

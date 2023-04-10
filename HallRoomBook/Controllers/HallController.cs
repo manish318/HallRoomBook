@@ -1,6 +1,7 @@
 ﻿using HallRoomBook.Data;
 using HallRoomBook.Models;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Options;
 
@@ -16,7 +17,7 @@ namespace HallRoomBook.Controllers
         [HttpGet]
         public IActionResult Create()
         {
-            List<MeetingHall> h = db.MeetingHall.ToList();
+            //List<MeetingHall> h = db.MeetingHall.ToList();
             return View();
         }
         [HttpPost]
