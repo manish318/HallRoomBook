@@ -3,41 +3,6 @@
 @{
     ViewData["Title"] = "Index";
 }
-
-
-<!--<table class="table">
-    <thead>
-        <tr>
-            <th>
-                @Html.DisplayNameFor(model => model.HallName)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.IsActive)
-            </th>
-            <th></th>
-        </tr>
-    </thead>
-    <tbody>
-@foreach (var item in Model) {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.HallName)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.IsActive)
-            </td>
-            <td>
-                <a asp-action="Edit" asp-route-id="@item.RowId">Edit</a> |
-                <a asp-action="Details" asp-route-id="@item.RowId">Details</a> |
-                <a asp-action="Delete" asp-route-id="@item.RowId">Delete</a>
-            </td>
-        </tr>
-}
-    </tbody>
-</table>-->
-
-
-
 <p>
     <a asp-action="Create"><button class="btn btn-primary">Add New Hall</button></a>
 </p>
